@@ -39,7 +39,6 @@ ${str}
           })
         }
       }
-      console.log(">", this.html)
       this.webserver()
     }
   },
@@ -47,12 +46,13 @@ ${str}
   webserver: function() {
     var html = this.html
     var uri = `/widget2/` + encodeURI(this.config.uid)
-    console.log(uri)
     this.expressApp.use(bodyParser.json())
 		this.expressApp.use(bodyParser.urlencoded({extended: true}))
     this.expressApp.get(uri, (req, res) => {
+      console.log("[WIDGET2] Request:", uri)
       res.status(200).send(this.html)
     })
+    console.log("[WIDGET2] Ready for serve:", uri)
     this.sendSocketNotification("READY")
   }
 })

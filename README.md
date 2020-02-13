@@ -1,5 +1,7 @@
 # MMM-Widget2
-MM module for displaying Web Widget or HTML code. This is lighter version of MMM-Widget. Made for usage by duplication .
+MM module for displaying Web Widget or HTML code. This is lighter version of MMM-Widget. Made for usage by duplication.
+
+Especially, this is not improved version of `MMM-Widget`. Just rebuilding for easy duplication. (Requested by @chassain)
 
 ## Install
 ```sh
